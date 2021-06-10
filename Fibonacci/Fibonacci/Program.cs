@@ -8,9 +8,9 @@ namespace Fibonacci
         {
             Console.Write("Enter a number : ");
             string userInput = Console.ReadLine();
-            int userNumber = Convert.ToInt32(userInput);
+            ulong userNumber = Convert.ToUInt64(userInput);
 
-            int[] fibo = new int[userNumber + 1];
+            ulong[] fibo = new ulong[userNumber + 1];
             Fibonacci(fibo);
 
             Console.WriteLine(fibo[userNumber]);
@@ -19,17 +19,17 @@ namespace Fibonacci
 
         }
     
-        static int[] Fibonacci(int[] fibo)
+        static ulong[] Fibonacci(ulong[] fibo)
         {
       
 
             fibo[0] = 0;
             fibo[1] = 1;
-            
+
 
             for (int index = 0; index + 2 < fibo.Length; index++)
             {
-                int nextNum = fibo[index] + fibo[index + 1];
+                ulong nextNum = fibo[index] + fibo[index + 1];
                 fibo[index + 2] = nextNum;              
             }
             
